@@ -4,7 +4,7 @@
 #include <cjson/cJSON.h>
 
 int config (char TOKEN[73]) {
-    FILE *fp = fopen("config.json", "r");
+    FILE *fp = fopen("src/config.json", "r");
     if (fp == NULL) {
         printf("Error: Unable to open the file.\n");
         return 1;
