@@ -16,7 +16,7 @@ int config (char TOKEN[73]) {
 
     cJSON *jsonp = cJSON_Parse(buffer);
     if (jsonp == NULL) {
-        printf("unexplained because cayla is lazy");
+        // printf("unexplained because cayla is lazy");
         cJSON_Delete(jsonp);
         return 1;
         }
