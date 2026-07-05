@@ -51,11 +51,11 @@ void on_interaction(struct discord *client, const struct discord_interaction *ev
     if (event->type != DISCORD_INTERACTION_APPLICATION_COMMAND)
         return; /* return if interaction isn't a slash command */
 
-    if (strcmp(event->data->name, "ping") == 0) {
-          struct discord_interaction_response params = {
-                .type = DISCORD_INTERACTION_CHANNEL_MESSAGE_WITH_SOURCE,
-                .data = &(struct discord_interaction_callback_data){
-                      .content = "pong"
+    if (strcmp(event->data->name, "shark") == 0) {
+        struct discord_interaction_response params = {
+            .type = DISCORD_INTERACTION_CHANNEL_MESSAGE_WITH_SOURCE,
+            .data = &(struct discord_interaction_callback_data){
+                .content = "shark"
                 }
           };
           discord_create_interaction_response(client, event->id,
